@@ -4,7 +4,8 @@ const jsonData = require('./jsonPackage')
 
 const server = http.createServer((req, res)=>{
     if(req.url === '/'){
-        res.write("<h1>this is my HTTP home server</h1>")
+        res.write("<title>Node handson-one</title> <p>Node js is a javascript runtime envirnoment that executes on server.</p> <h1>this is my HTTP home server</h1>")
+        res.write("<p>Benefits of Node js</p>  <ol><li>High Performance</li><li>Cose Effect</li></ol>")
         res.end()
     }else if(req.url === '/jsondata'){
         const jsonStore = JSON.stringify(jsonData)
